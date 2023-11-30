@@ -15,6 +15,7 @@ export class ProductListComponent {
     color: 'Matte Blue',
     discountedPercent: 9.5,
     inStock: 10,
+    yourCart: 0,
   };
 
   getDiscountedPrice() {
@@ -24,7 +25,12 @@ export class ProductListComponent {
     );
   }
 
-  onBuyClick() {
+  addItemToCart() {
     this.product.inStock = this.product.inStock - 1;
+    this.product.yourCart++;
+  }
+  removeItemFromCart() {
+    this.product.inStock = this.product.inStock + 1;
+    this.product.yourCart--;
   }
 }

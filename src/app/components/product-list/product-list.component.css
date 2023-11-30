@@ -1,0 +1,11 @@
+.flex-add-remove {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid orchid;
+  padding: 2%;
+}
+
+.price-flex {
+  display: flex;
+  justify-content: space-between;
+}

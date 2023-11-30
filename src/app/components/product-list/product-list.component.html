@@ -1,0 +1,7 @@
+<p>Name: {{ product.name }}</p>
+<p>Price: {{ "$" + product.price }}</p>
+<p>Color: {{ product.color }}</p>
+<p>
+  Discounted Price:
+  {{ "$" + getDiscountedPrice() }}
+</p>

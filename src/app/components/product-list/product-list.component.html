@@ -1,7 +1,14 @@
-<p>Name: {{ product.name }}</p>
-<p>Price: {{ "$" + product.price }}</p>
-<p>Color: {{ product.color }}</p>
-<p>
-  Discounted Price:
-  {{ "$" + getDiscountedPrice() }}
-</p>
+<div class="card" style="width: 15rem">
+  <img src="/assets/images/iphoneX.png" class="card-img-top" alt="img" />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.color }}</p>
+    <span class="card-text">
+      <del>{{ "$" + product.price }}</del>
+    </span>
+    <p class="card-text">{{ "$" + getDiscountedPrice() }}</p>
+  </div>
+  <button class="btn btn-primary" [disabled]="!(product.inStock > 0)">
+    Buy Now
+  </button>
+</div>

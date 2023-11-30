@@ -14,7 +14,7 @@ export class ProductListComponent {
     price: 998,
     color: 'Matte Blue',
     discountedPercent: 9.5,
-    inStock: 0,
+    inStock: 10,
   };
 
   getDiscountedPrice() {
@@ -22,5 +22,9 @@ export class ProductListComponent {
       this.product.price -
       (this.product.discountedPercent * this.product.price) / 100
     );
+  }
+
+  onBuyClick() {
+    this.product.inStock = this.product.inStock - 1;
   }
 }

@@ -1,4 +1,7 @@
 <div class="card" style="width: 15rem">
+  <button class="btn btn-primary" disabled>
+    In Stock: {{ product.inStock }}
+  </button>
   <img src="/assets/images/iphoneX.png" class="card-img-top" alt="img" />
   <div class="card-body">
     <h5 class="card-title">{{ product.name }}</h5>
@@ -8,7 +11,11 @@
     </span>
     <p class="card-text">{{ "$" + getDiscountedPrice() }}</p>
   </div>
-  <button class="btn btn-primary" [disabled]="!(product.inStock > 0)">
+  <button
+    class="btn btn-primary"
+    [disabled]="!(product.inStock > 0)"
+    (click)="onBuyClick()"
+  >
     Buy Now
   </button>
 </div>

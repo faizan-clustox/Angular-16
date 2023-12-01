@@ -10,4 +10,7 @@
     Search
   </button>
 </div>
-<p>{{ searchText }}</p>
+<p *ngIf="searchText.length > 0">
+  Showing Search Results for: {{ searchText }}
+</p>
+<p *ngIf="searchText.length < 0"></p>

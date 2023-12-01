@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
-import { ProductListComponent } from "./components/container/container.component";
+import { Container } from "./components/container/container.component";
 
 @Component({
     selector: 'app-root',
@@ -17,7 +17,7 @@ import { ProductListComponent } from "./components/container/container.component
         NavbarComponent,
         FormsModule,
         SearchComponent,
-        ProductListComponent
+        Container
     ]
 })
 export class AppComponent {

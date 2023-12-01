@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  navbarItems: string[] = ['Products', 'About', 'Contact Us'];
+}

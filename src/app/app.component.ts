@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
-import { SearchComponent } from "./components/search/search.component";
+import { SearchComponent } from './components/search/search.component';
+import { ProductListComponent } from "./components/container/container.component";
 
 @Component({
     selector: 'app-root',
@@ -15,9 +15,9 @@ import { SearchComponent } from "./components/search/search.component";
         CommonModule,
         RouterOutlet,
         NavbarComponent,
-        ProductListComponent,
         FormsModule,
-        SearchComponent
+        SearchComponent,
+        ProductListComponent
     ]
 })
 export class AppComponent {

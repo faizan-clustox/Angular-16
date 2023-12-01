@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchComponent } from "../search/search.component";
+import { SearchComponent } from '../search/search.component';
 
 @Component({
-    selector: 'product-list',
-    standalone: true,
-    templateUrl: './product-list.component.html',
-    styleUrl: './product-list.component.css',
-    imports: [CommonModule, SearchComponent]
+  selector: 'container',
+  standalone: true,
+  templateUrl: './container.component.html',
+  styleUrl: './container.component.css',
+  imports: [CommonModule, SearchComponent],
 })
 export class ProductListComponent {
   product = {

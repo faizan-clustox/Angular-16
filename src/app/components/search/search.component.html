@@ -6,7 +6,15 @@
     placeholder="Search"
     aria-label="Search"
   />
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+  <button
+    [ngClass]="{
+      btn: true,
+      'btn-primary': true,
+      disabled: !searchText
+    }"
+    type="button"
+    id="button-addon2"
+  >
     Search
   </button>
 </div>

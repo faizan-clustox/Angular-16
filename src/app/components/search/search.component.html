@@ -5,6 +5,7 @@
     [(ngModel)]="searchText"
     placeholder="Search"
     aria-label="Search"
+    (input)="onSearchTextChange()"
   />
   <button
     [ngClass]="{

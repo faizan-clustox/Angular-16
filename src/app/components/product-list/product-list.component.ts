@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
@@ -51,9 +51,11 @@ export class ProductListComponent {
   inStock = this.productList.filter((p) => p.is_in_inventory === true).length;
   outOfStock = this.totalItems - this.inStock;
 
+  @Input()
+  searchText: string = '';
+
   selectedRadioButton: string = 'all';
   onFilterChange(e: string) {
     this.selectedRadioButton = e;
-    console.log('FILTER CHANGED: ' + e);
   }
 }

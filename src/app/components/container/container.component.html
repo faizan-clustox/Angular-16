@@ -1,1 +1,2 @@
-<search></search> <product-list></product-list>
+<search (onSearchChange)="onSearchChange($event)"></search>
+<product-list [searchText]="searchText"></product-list>

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'search',
   standalone: true,
@@ -10,4 +10,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class SearchComponent {
   searchText: string = '';
+
+  @Output()
+  onSearchChange: EventEmitter<string> = new EventEmitter<string>();
+
+  onSearchTextChange() {
+    this.onSearchChange.emit(this.searchText);
+  }
 }

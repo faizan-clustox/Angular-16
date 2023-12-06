@@ -10,10 +10,7 @@
       <product
         [product]="item"
         [className]="'col-md-3'"
-        *ngIf="
-          selectedRadioButton === 'all' ||
-          item.is_in_inventory.toString() === selectedRadioButton
-        "
+        *ngIf="item.name.toLowerCase().includes(searchText)"
       ></product>
     </div>
   </div>

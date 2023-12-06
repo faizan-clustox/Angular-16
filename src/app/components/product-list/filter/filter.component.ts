@@ -17,7 +17,7 @@ export class FilterComponent {
   @Input()
   outOfStock: number = 0;
 
-  selectedRadioButton: string = 'true';
+  selectedRadioButton: string = 'all';
 
   @Output() selectedRadioButtonOut: EventEmitter<string> =
     new EventEmitter<string>();
@@ -25,6 +25,4 @@ export class FilterComponent {
   onRadioButtonChange() {
     this.selectedRadioButtonOut.emit(this.selectedRadioButton);
   }
-
-  
 }

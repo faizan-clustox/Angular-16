@@ -50,4 +50,8 @@ export class ProductListComponent {
   totalItems = this.productList.length;
   inStock = this.productList.filter((p) => p.is_in_inventory === true).length;
   outOfStock = this.totalItems - this.inStock;
+
+  onFilterChange(e: string) {
+    console.log('FILTER CHANGED: ' + e);
+  }
 }

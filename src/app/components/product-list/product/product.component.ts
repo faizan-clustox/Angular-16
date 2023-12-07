@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Product } from '../../Models/Product';
 @Component({
   selector: 'product',
   standalone: true,
@@ -10,12 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductComponent {
   @Input()
-  product: {
-    name: string;
-    price: string;
-    desc: string;
-    color: string;
-    imgUrl: string;
-  };
-  className: string;
+  product: Product;
+  @Input()
+  showModal: boolean;
+
+  openModal() {
+    // this.showModal = this.selectedProduct.showModal;
+    this.product.showModal = true;
+  }
 }

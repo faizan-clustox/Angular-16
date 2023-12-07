@@ -1,2 +1,9 @@
+<product-detail
+  *ngIf="productList.selectedProduct"
+  [selectedProduct]="productList.selectedProduct"
+  [showModal]="productList.showModal"
+  (click)="productList.onItemClick()"
+  [products]="productList.productList"
+></product-detail>
 <search (onSearchChange)="onSearchChange($event)"></search>
-<product-list [searchText]="searchText"></product-list>
+<product-list [searchText]="searchText" #productList></product-list>

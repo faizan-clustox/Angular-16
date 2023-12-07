@@ -2,19 +2,15 @@
   <input
     type="text"
     class="form-control"
-    [(ngModel)]="searchText"
     placeholder="Search"
     aria-label="Search"
-    (input)="onSearchTextChange()"
+    #searchInput
   />
   <button
-    [ngClass]="{
-      btn: true,
-      'btn-primary': true,
-      disabled: !searchText
-    }"
+    class="btn btn-primary"
     type="button"
     id="button-addon2"
+    (click)="onSearchTextChange(searchInput)"
   >
     Search
   </button>
@@ -22,4 +18,3 @@
 <p *ngIf="searchText.length > 0">
   Showing Search Results for: {{ searchText }}
 </p>
-<p *ngIf="searchText.length < 0"></p>

@@ -1,18 +1,18 @@
 <div
   class="modal fade"
-  [class.show]="selectedProduct.showModal"
+  [class.show]="product.showModal"
   id="exampleModal"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
   aria-modal="true"
   role="dialog"
-  [style.display]="selectedProduct.showModal ? 'block' : 'none'"
+  [style.display]="product.showModal ? 'block' : 'none'"
 >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
-          {{ selectedProduct.name }}
+          {{ product.name }}
         </h5>
         <button
           type="button"
@@ -21,7 +21,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">...</div>
+      <div class="modal-body">{{ product.desc }}</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="closeModal()">
           Close
@@ -33,6 +33,6 @@
 </div>
 <div
   class="modal-backdrop fade show"
-  [class.show]="selectedProduct.showModal"
-  [style.display]="selectedProduct.showModal ? 'block' : 'none'"
+  [class.show]="product.showModal"
+  [style.display]="product.showModal ? 'block' : 'none'"
 ></div>

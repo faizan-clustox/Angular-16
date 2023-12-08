@@ -15,7 +15,7 @@ export class ProductComponent {
   showModal: boolean;
 
   openModal() {
-    // this.showModal = this.selectedProduct.showModal;
     this.product.showModal = true;
+    console.log(this.product);
   }
 }

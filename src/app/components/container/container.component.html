@@ -4,6 +4,7 @@
   [showModal]="productList.showModal"
   (click)="productList.onItemClick()"
   [products]="productList.productList"
+  [productListComp]="productListComponent"
 ></product-detail>
 <search (onSearchChange)="onSearchChange($event)"></search>
 <product-list [searchText]="searchText" #productList></product-list>

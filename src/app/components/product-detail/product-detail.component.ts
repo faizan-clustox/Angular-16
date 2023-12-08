@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../Models/Product';
+import { ProductListComponent } from '../product-list/product-list.component';
 
 @Component({
   selector: 'product-detail',
@@ -14,15 +15,14 @@ export class ProductDetailComponent {
   selectedProduct: Product;
   @Input()
   products: Product[];
+  @Input() productListComp: ProductListComponent = undefined;
+  product: Product;
+  ngOnInit() {
+    this.product = this.productListComp.selectedProduct;
+  }
   @Input()
   showModal: boolean;
   closeModal() {
-    console.log('Before', this.products);
-    this.selectedProduct.showModal = false;
-    console.log('After', this.products);
-  }
-  openModal() {
-    // this.showModal = this.selectedProduct.showModal;
-    this.selectedProduct.showModal = true;
+    this.product.showModal = false;
   }
 }
